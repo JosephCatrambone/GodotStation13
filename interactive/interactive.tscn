@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://yxv7xkcyy408"]
+
+[ext_resource type="Script" path="res://interactive/interactive.gd" id="1_3shee"]
+
+[node name="Interactive" type="Node3D" groups=["interactive"]]
+script = ExtResource("1_3shee")

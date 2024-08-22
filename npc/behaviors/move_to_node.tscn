@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ducdmt5t00gnm"]
+
+[ext_resource type="Script" path="res://npc/behaviors/move_to_node.gd" id="1_arwbj"]
+
+[node name="MoveToNode" type="Node3D"]
+script = ExtResource("1_arwbj")

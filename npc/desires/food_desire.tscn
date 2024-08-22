@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://brnkq23xjhh5u"]
+
+[ext_resource type="PackedScene" uid="uid://b5pj3eymcnvei" path="res://npc/desires/desire.tscn" id="1_ba3qg"]
+
+[sub_resource type="Curve" id="Curve_ejghy"]
+_data = [Vector2(0, 0.0728083), 0.0, -0.717843, 0, 0, Vector2(0.12, 0.000371456), 0.0, 0.0, 0, 0, Vector2(0.502, 0.0390044), 0.326292, 0.326292, 0, 0, Vector2(1, 1), 2.65602, 0.0, 0, 0]
+point_count = 4
+
+[node name="FoodDesire" instance=ExtResource("1_ba3qg")]
+desire_name = "food"
+growth_rate = 0.03
+motivation_scale = SubResource("Curve_ejghy")

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6xfoa31eglxp"]
+
+[ext_resource type="Script" path="res://npc/behaviors/idle.gd" id="1_e5dmy"]
+
+[node name="Idle" type="Node3D"]
+script = ExtResource("1_e5dmy")

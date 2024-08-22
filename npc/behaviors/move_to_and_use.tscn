@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://e4nlvkgty5pk"]
+
+[ext_resource type="Script" path="res://npc/behaviors/move_to_and_use.gd" id="1_iv8mt"]
+
+[node name="MoveToAndUse" type="Node3D"]
+script = ExtResource("1_iv8mt")

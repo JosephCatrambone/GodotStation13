@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5pj3eymcnvei"]
+
+[ext_resource type="Script" path="res://npc/desires/desire.gd" id="1_2t4gr"]
+
+[node name="Desire" type="Node3D"]
+script = ExtResource("1_2t4gr")

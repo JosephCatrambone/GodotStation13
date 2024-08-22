@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dxu8bhlvr4wkd"]
+
+[ext_resource type="Script" path="res://npc/behaviors/wait.gd" id="1_56ps3"]
+
+[node name="Wait" type="Node3D"]
+script = ExtResource("1_56ps3")

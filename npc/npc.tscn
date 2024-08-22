@@ -1,0 +1,51 @@
+[gd_scene load_steps=10 format=3 uid="uid://cddaja1jgomy0"]
+
+[ext_resource type="Script" path="res://npc/npc.gd" id="1_o8w8b"]
+[ext_resource type="PackedScene" uid="uid://d2vpnuff0t0gp" path="res://prefabs/sight.tscn" id="2_35ycx"]
+[ext_resource type="Script" path="res://components/face_direction_of_movement.gd" id="3_pvyte"]
+[ext_resource type="PackedScene" uid="uid://djxy5dkgw8fy0" path="res://npc/desires/rest_desire.tscn" id="4_efkas"]
+[ext_resource type="PackedScene" uid="uid://brnkq23xjhh5u" path="res://npc/desires/food_desire.tscn" id="5_dpwxv"]
+[ext_resource type="PackedScene" uid="uid://5k5er43kcv57" path="res://npc/desires/play_desire.tscn" id="6_blapa"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2jodt"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_3q4t6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7p4st"]
+size = Vector3(5, 1, 5)
+
+[node name="NPC" type="CharacterBody3D"]
+collision_layer = 2
+collision_mask = 3
+floor_max_angle = 0.610865
+script = ExtResource("1_o8w8b")
+movement_speed = 2.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_2jodt")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_3q4t6")
+
+[node name="SightArea" parent="." instance=ExtResource("2_35ycx")]
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 0, 1, 3)
+
+[node name="CollisionShape3D" parent="SightArea" index="0"]
+shape = SubResource("BoxShape3D_7p4st")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+
+[node name="FaceDirectionOfMovement" type="Node3D" parent="."]
+script = ExtResource("3_pvyte")
+
+[node name="Desires" type="Node3D" parent="."]
+
+[node name="RestDesire" parent="Desires" instance=ExtResource("4_efkas")]
+
+[node name="FoodDesire" parent="Desires" instance=ExtResource("5_dpwxv")]
+
+[node name="PlayDesire" parent="Desires" instance=ExtResource("6_blapa")]
+
+[editable path="SightArea"]

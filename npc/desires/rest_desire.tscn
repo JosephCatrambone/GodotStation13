@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://djxy5dkgw8fy0"]
+
+[ext_resource type="PackedScene" uid="uid://b5pj3eymcnvei" path="res://npc/desires/desire.tscn" id="1_i6oc5"]
+
+[sub_resource type="Curve" id="Curve_ekl1o"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.754, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[node name="RestDesire" instance=ExtResource("1_i6oc5")]
+desire_name = "rest"
+growth_rate = 0.001
+motivation_scale = SubResource("Curve_ekl1o")
