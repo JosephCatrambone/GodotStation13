@@ -43,9 +43,11 @@ script = ExtResource("3_pvyte")
 [node name="Desires" type="Node3D" parent="."]
 
 [node name="RestDesire" parent="Desires" instance=ExtResource("4_efkas")]
+growth_rate = 0.01
 
 [node name="FoodDesire" parent="Desires" instance=ExtResource("5_dpwxv")]
 
 [node name="PlayDesire" parent="Desires" instance=ExtResource("6_blapa")]
+growth_rate = 0.005
 
 [editable path="SightArea"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://c63ttk4l0wo4s"]
+[gd_scene load_steps=9 format=3 uid="uid://c63ttk4l0wo4s"]
 
 [ext_resource type="PackedScene" uid="uid://cb4aiaruwwnc5" path="res://prefabs/player.tscn" id="1_stiik"]
 [ext_resource type="Script" path="res://components/smooth_snap_to_player.gd" id="2_gnje6"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cddaja1jgomy0" path="res://npc/npc.tscn" id="4_itrcc"]
 [ext_resource type="PackedScene" uid="uid://578k4xjb7vb0" path="res://interactive/bed.tscn" id="5_8wvgs"]
 [ext_resource type="PackedScene" uid="uid://b0lg3vkpsrkey" path="res://interactive/entertainment_cube.tscn" id="6_4q7de"]
+[ext_resource type="PackedScene" uid="uid://deacchqkxs48j" path="res://interactive/food_pyramid.tscn" id="7_85878"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_iokgi"]
 vertices = PackedVector3Array(-19.5, 2, -11.75, -16, 2, -11.75, -16, 2, -15.5, -12.5, 2, -16, -12.75, 2, -19.5, -19.5, 2, -19.5, 3.75, 2, -16.75, 4, 2, -16.25, 5.5, 2, -16.25, 5.75, 2, -16.75, 15.75, 2, -17, 15.75, 2, -19.5, -3.25, 2, -14.25, -3.25, 2, -8.25, -2.75, 2, -8.25, -2.5, 2, -16.25, -1, 2, -16.75, -3.75, 2, -16.25, 16.75, 2, 3.75, 17, 2, 4.25, 19.5, 2, 4.25, 16.75, 2, 1.75, 16.75, 2, -16.75, 19.5, 2, -19.5, 12, 2, 2.75, 12.25, 2, 3.5, 15.5, 2, 3.5, 8.25, 2, 3.75, 8.75, 2, 3.5, 8.75, 2, 2.5, 5.5, 2, 2.25, 4.5, 2, 3.5, 9.5, -0.75, 1.5, 9.75, -0.5, 3, 11, -0.5, 2.75, 11.25, -0.75, 1.5, 6.5, -0.75, 1.5, 15.75, -0.5, 1, 15.75, -0.75, -16, 6.5, -0.75, -15.75, -1.5, -0.75, -9.5, 3.25, -0.75, -9.25, 3, -0.75, -15.75, -1.5, -0.75, -15.5, -4.25, -0.75, -9.5, -4.5, -0.75, -15.25, -8.5, -0.75, -15.25, -15, -0.75, -14.75, -14.75, -0.75, -9.5, -19.5, 2, 13.5, -15.25, 2, 13.25, 5.25, -0.5, 6.75, 5.25, -0.5, 4.75, 4, -0.75, 4.75, 3.75, -0.5, 7, -4, -0.75, -7.25, 3.5, -0.75, 4, -1.5, -0.75, -8, 3.75, -0.5, 9.25, -2, -0.5, 7, -1.75, -0.5, 9.25, -2, -0.75, -7.25, -4, -0.5, 7, -14.25, -0.75, 9.25, -4.25, -0.5, 9.25, 9.75, -0.5, 4.5, 11.5, -0.5, 4.5, 6.75, -0.5, 7, 7.25, -0.5, 14.5, 15.5, -0.5, 14.75, 16, -0.5, 4.75, 19.5, 2, 13.5, 16.5, 2, 13.5, 16.25, 2, 15.75, 19.5, 2, 19.5, -3.5, 2, 15.5, -15, 2, 15.5, -15.25, 2, 19.5, 6, 2, 14.5, 5.75, 2, 7.75, 4.75, 2, 7.75, 5, 2, 15.25, 6.5, 2, 15.5, -2.25, 2, 15.5, -2.75, 2, 8, -3.25, 2, 8, -14, -0.5, 14.75, -4.25, -0.5, 14.5, -1.5, -0.5, 14.5, 4, -0.5, 14.5, -19.5, 2, 19.5)
@@ -82,3 +83,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.397785, -0.033864, -0.21289
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_iokgi")
+
+[node name="FoodPyramid" parent="." instance=ExtResource("7_85878")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.28302, 0, 1.80957)

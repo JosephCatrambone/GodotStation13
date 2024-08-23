@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://deacchqkxs48j"]
+
+[ext_resource type="PackedScene" uid="uid://yxv7xkcyy408" path="res://interactive/interactive.tscn" id="1_6mj7a"]
+
+[sub_resource type="PrismMesh" id="PrismMesh_x85vs"]
+
+[node name="FoodPyramid" instance=ExtResource("1_6mj7a")]
+provides = "food"
+amount = -0.15
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="0"]
+mesh = SubResource("PrismMesh_x85vs")
