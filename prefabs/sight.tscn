@@ -9,3 +9,9 @@ monitorable = false
 script = ExtResource("1_j0uef")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+target_position = Vector3(0, 0, -1)
+collision_mask = 3
+debug_shape_custom_color = Color(0.658824, 0.937255, 0, 1)
+debug_shape_thickness = 5

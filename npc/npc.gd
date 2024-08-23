@@ -1,6 +1,6 @@
 class_name NPC extends CharacterBody3D
 
-var debug_desires: bool = true
+var debug_desires: bool = false
 var debug_last_print: float = 0.0
 @export var display_name: String = "Someone"
 @export var movement_speed: float = 1.0
