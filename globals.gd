@@ -1,6 +1,7 @@
 extends Node
 
 var player: Node3D
+signal player_spawned(Node3D)
 
 func get_components(actor: Node, include_children: bool) -> Array[Component]:
 	"""Given an actor, return all of the components on it.
