@@ -2,6 +2,12 @@ class_name NPCBehavior extends Node3D
 
 signal popped  # Emitted via the _parent managing class_(!!!) calling this.emit_signal("popped") when this is popped.
 
+var npc: NPC
+
+func _enter_tree() -> void:
+	if self.get_parent() != null:
+		self.npc = self.get_parent()
+
 func is_complete() -> bool:
 	# Returns 'true' when the task is completed.
 	# If a task loops endlessly this might always return false, so check if it's preemptable.

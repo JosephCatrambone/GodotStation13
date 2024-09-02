@@ -40,7 +40,6 @@ func _physics_process(delta: float) -> void:
 				if self.actors_in_fov[actor] < 0:
 					self.detected_actors.append(actor)
 					emit_signal("detected", actor)
-					print("Detected actor")
 		# Reset the time if the actor isn't seen
 		if not seen:
 			self.actors_in_fov[actor] = min(reaction_time, self.actors_in_fov[actor]+delta)

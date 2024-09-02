@@ -8,5 +8,5 @@ point_count = 3
 
 [node name="RestDesire" instance=ExtResource("1_i6oc5")]
 desire_name = "rest"
-growth_rate = 0.001
+growth_rate = 0.01
 motivation_scale = SubResource("Curve_ekl1o")
