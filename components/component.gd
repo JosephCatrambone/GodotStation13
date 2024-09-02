@@ -1,1 +1,1 @@
-class_name Component extends Node
+class_name Component extends Node3D
