@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqkfkshyckps1"]
+
+[ext_resource type="PackedScene" uid="uid://b5pj3eymcnvei" path="res://npc/desires/desire.tscn" id="1_nbro4"]
+
+[sub_resource type="Curve" id="Curve_ohvl7"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.605159, 0), 0.0, 0.0, 0, 0, Vector2(1, 0.55486), 1.16459, 0.0, 0, 0]
+point_count = 3
+
+[node name="ShowerDesire" instance=ExtResource("1_nbro4")]
+desire_name = "shower"
+growth_rate = 0.01
+motivation_scale = SubResource("Curve_ohvl7")

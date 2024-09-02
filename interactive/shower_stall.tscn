@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cg7lo8eodaehq"]
+
+[ext_resource type="PackedScene" uid="uid://yxv7xkcyy408" path="res://interactive/interactive.tscn" id="1_l3r2p"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ik5pt"]
+
+[node name="shower_stall" instance=ExtResource("1_l3r2p")]
+provides = "shower"
+amount = -0.95
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CylinderMesh_ik5pt")
